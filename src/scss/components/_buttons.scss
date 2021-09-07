@@ -4,6 +4,10 @@
   box-shadow: var(--box-shadow-sm);
   min-height: 2rem;
   min-width: 6rem;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:focus {
     outline: none;
   }

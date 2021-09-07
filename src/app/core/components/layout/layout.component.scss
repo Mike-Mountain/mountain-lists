@@ -1,0 +1,13 @@
+.layout {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4.5rem;
+}
+
+.content {
+  height: 100%;
+  overflow-y: auto;
+  background-color: #e0e0e0;
+}

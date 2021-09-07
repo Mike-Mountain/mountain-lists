@@ -6,9 +6,11 @@ import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { LandingComponent } from './components/landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LayoutComponent } from './components/layout/layout.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
-  declarations: [LandingComponent],
+  declarations: [LandingComponent, LayoutComponent, NavigationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     AkitaNgRouterStoreModule,
     // Components
     LandingComponent,
+    LayoutComponent,
   ],
 })
 export class CoreModule {}
