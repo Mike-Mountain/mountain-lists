@@ -1,0 +1,19 @@
+.card {
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.card-header {
+  padding: .5rem 1rem;
+  width: 100%;
+}
+
+.card-content {
+  padding: .75rem;
+  width: 100%;
+}
+
+.card-footer {
+  padding: .75rem;
+  width: 100%;
+}

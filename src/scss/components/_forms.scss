@@ -1,0 +1,36 @@
+.form {
+  padding: 0 .5rem .5rem .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: .75rem 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.form-label {
+  padding: .25rem 0;
+}
+
+.form-input {
+  border: none;
+  height: 2rem;
+  width: 85%;
+  padding: .5rem 1rem;
+  box-shadow: var(--inset-box-shadow);
+  border-radius: var(--input-border-radius);
+  &:focus {
+    outline: none;
+  }
+}
+

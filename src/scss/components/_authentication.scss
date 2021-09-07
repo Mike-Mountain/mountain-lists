@@ -1,0 +1,25 @@
+.authentication {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-button {
+  width: 90%;
+  height: 3rem;
+}
+
+.auth-button-sm {
+  width: 60%;
+  margin-top: .5rem;
+}
+
+.auth-text {
+  margin-top: .75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

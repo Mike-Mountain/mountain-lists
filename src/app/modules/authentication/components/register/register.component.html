@@ -1,0 +1,46 @@
+<section class="authentication">
+  <div class="card w-65">
+    <div class="card-header">
+      <h1 class="text-center mb-3">Register</h1>
+      <hr class="w-50 mx-auto">
+    </div>
+    <div class="card-content" *ngIf="registerForm">
+      <form class="form" [formGroup]="registerForm">
+        <div class="form-field">
+          <label class="form-label" for="email">Email</label>
+          <input
+            id="email"
+            class="form-input"
+            type="email"
+            formControlName="email"
+          >
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="username">Username</label>
+          <input
+            id="username"
+            class="form-input"
+            type="text"
+            formControlName="username"
+          >
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="password">Password</label>
+          <input
+            id="password"
+            class="form-input"
+            type="password"
+            formControlName="password"
+          >
+        </div>
+      </form>
+      <div class="flex-center flex-column">
+        <button class="button auth-button" (click)="register()">Register</button>
+        <div class="auth-text">
+          <small>Already have an account?</small>
+          <small>Sign in here</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
