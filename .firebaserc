@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mountain-lists": {
+      "hosting": {
+        "lists": [
+          "mountain-lists"
+        ]
+      }
+    }
+  }
+}

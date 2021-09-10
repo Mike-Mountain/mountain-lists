@@ -1,4 +1,6 @@
+import { firebase } from './environment.firebase';
+
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:1337'
+  firebase: firebase,
 };

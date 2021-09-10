@@ -1,30 +1,17 @@
 import { FormBuilder, FormGroup } from '@angular/forms';
+import firebase from 'firebase/compat';
+import User = firebase.User;
 
 export interface Session {
-  token: string;
-  user: User;
+  user: AppUser;
 }
 
 export interface Credentials {
-  identifier: string;
+  email: string;
   password: string;
 }
 
-export interface RegistrationCredentials extends Credentials {
-  email: string;
-}
-
-export interface User {
-  id: number;
-  username: string;
-  email: string;
-  provider: string;
-  confirmed: boolean;
-  blocked: boolean;
-  role: Role;
-  created_at: string;
-  updated_at: string;
-}
+export interface AppUser extends User {}
 
 export interface Role {
   id: number;
@@ -35,23 +22,8 @@ export interface Role {
 
 export function createSession(params: Partial<Session>): Session {
   return {
-    token: params.token,
-    user: createUser(params.user as User),
+    user: params.user as AppUser,
   } as Session;
-}
-
-export function createUser(params: Partial<User>): User {
-  return {
-    id: params.id,
-    username: params.username,
-    blocked: params.blocked,
-    created_at: params.created_at,
-    confirmed: params.confirmed,
-    email: params.email,
-    provider: params.provider,
-    role: createRole(params.role as Role),
-    updated_at: params.updated_at,
-  } as User;
 }
 
 export function createRole(params: Partial<Role>): Role {

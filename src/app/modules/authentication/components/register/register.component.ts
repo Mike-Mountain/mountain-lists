@@ -31,11 +31,11 @@ export class RegisterComponent implements OnInit {
   }
 
   public register(): void {
-    this.sessionService
-      .register(this.registerForm?.value)
-      .subscribe((session) => {
-        console.log(session);
-        this.router.navigateByUrl('/');
-      });
+    // this.sessionService
+    //   .register(this.registerForm?.value)
+    //   .subscribe((session) => {
+    //     console.log(session);
+    //     this.router.navigateByUrl('/');
+    //   });
   }
 }

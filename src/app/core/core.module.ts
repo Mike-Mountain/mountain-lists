@@ -8,6 +8,8 @@ import { LandingComponent } from './components/landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [LandingComponent, LayoutComponent, NavigationComponent],
@@ -17,6 +19,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     HttpClientModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AkitaNgRouterStoreModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   exports: [
     // Modules
@@ -25,6 +29,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     HttpClientModule,
     AkitaNgDevtools,
     AkitaNgRouterStoreModule,
+    AngularFirestoreModule,
+    AngularFireModule,
     // Components
     LandingComponent,
     LayoutComponent,

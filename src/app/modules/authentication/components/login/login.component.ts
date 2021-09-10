@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { createAuthenticationForm } from '../../store/session.model';
 import { SessionService } from '../../store/session.service';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private auth: AngularFireAuth,
     private sessionService: SessionService,
     private router: Router
   ) {}
